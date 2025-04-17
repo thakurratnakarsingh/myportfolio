@@ -1,0 +1,110 @@
+.MainContainer {
+    padding: 5%;
+    background: linear-gradient(to right, #141e30, #243b55); 
+    color: white;
+    text-align: center;
+  }
+  
+  /* Title Styling */
+  .title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #ff9800;
+  }
+  
+  /* Experience Box */
+  .expBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  /* Card Styling */
+  .cardContainer {
+    width: 400px;
+  }
+  
+  .expCard {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .expCard:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.3);
+  }
+  
+  /* Typography */
+  .company {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffcc00;
+    margin-bottom: 5px;
+  }
+  
+  .role {
+    font-size: 1.1rem;
+    color: #ff9800;
+    margin-bottom: 10px;
+  }
+  
+  .description {
+    font-size: 1rem;
+    color: white;
+    opacity: 0.8;
+  }
+  
+  /* Learn More Button */
+  .learnMore {
+    color: #ff9800 !important;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  .learnMore:hover {
+    color: #ffcc00 !important;
+    transform: scale(1.1);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .expBox {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .title {
+      font-size: 2rem;
+    }
+  
+    .cardContainer {
+      width: 100%;
+      max-width: 400px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .title {
+      font-size: 1.8rem;
+    }
+  
+    .company {
+      font-size: 1.1rem;
+    }
+  
+    .role {
+      font-size: 1rem;
+    }
+  
+    .description {
+      font-size: 0.9rem;
+    }
+  }
+  

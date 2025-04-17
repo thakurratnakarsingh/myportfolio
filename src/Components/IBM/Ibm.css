@@ -1,0 +1,89 @@
+.ibm-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background-color: #acf6ed;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+  }
+  
+  .ibm-logo {
+    display: block;
+    width: 100%;
+    max-width: 860px;
+    height: 400px;
+    margin: 0 auto 1rem auto;
+  }
+  
+  .ibm-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #0b62c4;
+
+  }
+  
+  .ibm-section {
+    margin-bottom: 2rem;
+  }
+  
+  .ibm-section h2 {
+    color: #0b62c4;
+    margin-bottom: 0.5rem;
+
+  }
+  
+  .ibm-project {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+
+  }
+  
+  .ibm-image {
+    width: 350px;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  /* 🔽 Mobile Responsive Tweaks */
+  @media (max-width: 768px) {
+    .ibm-container {
+      padding: 1rem;
+    }
+  
+    .ibm-title {
+      font-size: 2rem;
+    }
+  
+    .ibm-project {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .ibm-image {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .ibm-title {
+      font-size: 1.75rem;
+    }
+  
+    .ibm-section h2 {
+      font-size: 1.25rem;
+    }
+  
+    .ibm-container {
+      padding: 1rem;
+    }
+  }
+  

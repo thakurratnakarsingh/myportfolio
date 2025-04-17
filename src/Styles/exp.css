@@ -1,0 +1,77 @@
+.experience-section {
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: auto;
+    background: #f9fafb;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .experience-title {
+    font-size: 2.4rem;
+    text-align: center;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 2rem;
+  }
+  
+  .experience-loader {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #4b5563;
+  }
+  
+  .experience-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+  
+  .experience-card {
+    display: flex;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    align-items: center;
+    gap: 1.5rem;
+    border: 1px solid #e5e7eb;
+    text-decoration: none;
+  }
+  
+  .experience-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  }
+  
+  .experience-logo img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 1px solid #d1d5db;
+    background-color: #f3f4f6;
+  }
+  
+  .experience-details {
+    flex: 1;
+  }
+  
+  .experience-details h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.4rem;
+    color: #111827;
+  }
+  
+  .experience-dates {
+    font-size: 0.95rem;
+    color: #6b7280;
+    margin-bottom: 0.5rem;
+  }
+  
+  .experience-role {
+    font-size: 1rem;
+    color: #374151;
+    font-weight: 500;
+  }
+  
