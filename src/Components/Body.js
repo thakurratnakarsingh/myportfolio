@@ -34,10 +34,10 @@ const Body: React.FC = () => {
           Hello, I'm Ratnakar Singh
         </motion.h1>
         <motion.h2 className="slideIn" whileHover={{ scale: 1.05 }}>
-          MERN STACK DEVELOPER
+          React Native & React Developer
         </motion.h2>
         <motion.p className="fadeIn" whileHover={{ scale: 1.05 }}>
-          Passionate about building mobile applications with smooth UI and great performance.
+          Specialized in crafting cross-platform mobile applications with React Native and web applications with React. Focused on delivering exceptional user experiences with smooth animations, responsive designs, and optimal performance.
         </motion.p>
         <motion.button
           className="cta-button slideIn"
