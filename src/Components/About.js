@@ -40,7 +40,7 @@ const About = ({ isInHome = false }) => {
       <div className="about-section">
         <h2 className="section-title">Let's Work Together</h2>
         <p className="section-content">
-          Want to build something together? Drop me a message or connect with me on <a href="https://wa.me/918576045056" target="_blank" rel="noopener noreferrer">WhatsApp</a>.
+          Want to build something ? Drop me a message or connect with me on <a href="https://wa.me/918576045056" target="_blank" rel="noopener noreferrer">WhatsApp</a>.
         </p>
       </div>
     </div>
