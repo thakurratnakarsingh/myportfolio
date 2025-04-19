@@ -14,7 +14,7 @@ const Education = () => {
           <img src={reacticon} alt="GitHub" className="icon" />
           <h3>UNITED COLLEGE OF</h3> 
           <h3> ENGINEERING AND MANAGEMENT</h3>
-          <p>August 2023 to July 2019</p>
+          <p>August 2015 to July 2019</p>
         </view>
         <view>
           <img src={ca} alt="React" className="icon" />
