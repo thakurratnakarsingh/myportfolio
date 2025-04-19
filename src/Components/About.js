@@ -1,61 +1,52 @@
-import React from "react";
-import { motion } from "framer-motion";
-import Nevbar from "./Layout/Nevbar.js";
+import React from 'react';
+import "../Styles/About.css";
+import Layout from './Layout/Layout';
 
-const About = () => {
-  return (
-    <div className="relative min-h-screen bg-gradient-to-br from-gray-900 to-black text-white flex flex-col items-center">
-      {/* Background Blur */}
-      <div className="absolute inset-0 bg-blue-500 opacity-30 blur-[120px]"></div>
+const About = ({ isInHome = false }) => {
+  const content = (
+    <div className="about-container">
+      <div className="about-section">
+        <h1 className="about-title">About Me</h1>
+        <p className="about-intro">
+          Hi, I'm Ratnakar Singh — a passionate Full-Stack Developer specializing in React Native, Node.js, and Python automation. I craft intelligent digital solutions with clean code and powerful performance.
+        </p>
+      </div>
 
-      {/* Navbar */}
-      <Nevbar />
+      <div className="about-section">
+        <h2 className="section-title">My Journey</h2>
+        <p className="section-content">
+          I started coding out of curiosity — tinkering with simple programs and diving deep into automation. Over time, I turned that passion into real-world applications, from bots and mobile apps to video streaming platforms and AI job scrapers.
+        </p>
+      </div>
 
-      {/* About Section */}
-      
-      <div className="relative z-10 container mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-center">
-        {/* Profile Image */}
-        <motion.div 
-          className="w-full md:w-1/3 flex justify-center"
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <motion.img 
-            src="https://via.placeholder.com/250" 
-            alt="Profile" 
-            className="rounded-full shadow-2xl border-4 border-blue-500 transform transition-transform hover:scale-105 hover:rotate-3"
-            whileHover={{ scale: 1.08 }}
-          />
-        </motion.div>
+      <div className="about-section">
+        <h2 className="section-title">What I Do</h2>
+        <ul className="skills-list">
+          <li>⚛️ React Native apps for Android and iOS</li>
+          <li>🐍 Python bots and automation (AI Agents, Selenium, etc.)</li>
+          <li>🌐 Backend APIs with Node.js and Express</li>
+          <li>🗃️ Databases with MySQL & MongoDB</li>
+          <li>🎬 Video processing with FFmpeg & HLS streaming</li>
+        </ul>
+      </div>
 
-        {/* Text Section */}
-        <motion.div 
-          className="w-full md:w-2/3 mt-6 md:mt-0 md:ml-12 p-8 rounded-xl bg-white/10 backdrop-blur-lg shadow-lg border border-white/20"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-        >
-          <h2 className="text-4xl md:text-5xl font-extrabold text-blue-400 mb-4">
-            About Me
-          </h2>
-          <p className="text-gray-300 text-lg leading-relaxed">
-            Hi, I'm <span className="text-blue-400 font-semibold">Ratnakar Singh</span>, 
-            a passionate **React Native Developer** with expertise in **scalable and high-performance mobile apps**.  
-            I specialize in **React, Next.js, and Node.js**, delivering **seamless user experiences** across platforms.
-          </p>
+      <div className="about-section">
+        <h2 className="section-title">Fun Facts</h2>
+        <p className="section-content">
+          When I'm not coding, you'll find me at the gym, brainstorming new ideas, or diving into the latest tech trends. I believe in building with heart and hustle.
+        </p>
+      </div>
 
-          <motion.button 
-            className="mt-6 px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-600 transition-all hover:shadow-blue-500/50"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Contact Me
-          </motion.button>
-        </motion.div>
+      <div className="about-section">
+        <h2 className="section-title">Let's Work Together</h2>
+        <p className="section-content">
+          Want to build something together? Drop me a message or connect with me on <a href="https://wa.me/918576045056" target="_blank" rel="noopener noreferrer">WhatsApp</a>.
+        </p>
       </div>
     </div>
   );
+
+  return isInHome ? content : <Layout>{content}</Layout>;
 };
 
 export default About;
