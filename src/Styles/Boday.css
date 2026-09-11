@@ -1,139 +1,164 @@
 /* Main Layout */
 .MainContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 55vh;
-    padding: 5%;
-    color: white;
-  }
-  
-  .InfoContainer {
-    flex: 1;
-    animation: fadeIn 1.5s ease-in-out;
-  }
-  
-  h1, h2 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-  }
-  
-  p {
-    font-size: 1.2rem;
-    max-width: 400px;
-    opacity: 0.9;
-  }
-  
-  /* Right Side (Image Section) */
-  .ImageContainer {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .profileImage {
-    width: 500px;
-    height: auto;
-    border-radius: 50%;
-    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
-    transition: transform 0.3s ease-in-out;
-  }
-  .background-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-    opacity: 0.7;
-  }
-  
-  /* Update MainContainer to support layering */
-  .MainContainer {
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 55vh;
-    padding: 5%;
-    color: white;
+    min-height: 85vh; /* Larger hero section */
+    padding: 0 10%;
+    color: var(--text-primary);
     overflow: hidden;
-  }
+    background: radial-gradient(circle at top right, rgba(0, 188, 212, 0.1), transparent 50%),
+                radial-gradient(circle at bottom left, rgba(255, 152, 0, 0.1), transparent 50%);
+}
+  
+.InfoContainer {
+    flex: 1;
+    animation: fadeIn 1.5s ease-in-out;
+    z-index: 2; /* above video */
+}
+
+.InfoContainer h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, var(--text-primary), var(--primary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.InfoContainer h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+}
+
+.InfoContainer p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 500px;
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+}
+
+/* Right Side (Image Section) */
+.ImageContainer {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.profileImage {
+    width: 400px; /* adjusted size */
+    height: 400px; /* Make it perfectly square before border-radius */
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--surface-color);
+    box-shadow: 0 0 30px rgba(0, 188, 212, 0.3), inset 0 0 20px rgba(255, 152, 0, 0.2);
+    transition: transform 0.4s ease-out, box-shadow 0.4s ease;
+}
+
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    opacity: 0.15; /* Subtler video background */
+    pointer-events: none;
+}
   
   /* Hover Effects */
   .profileImage:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(0, 188, 212, 0.6), inset 0 0 30px rgba(255, 152, 0, 0.4);
   }
   
   /* CTA Button */
   .cta-button {
-    padding: 12px 24px;
-    font-size: 1.2rem;
+    padding: 14px 32px;
+    font-size: 1.1rem;
+    font-weight: 600;
     border: none;
-    background: #ff9800;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
     color: white;
-    border-radius: 30px;
+    border-radius: 50px;
     cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 188, 212, 0.4);
     transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
   }
   
   .cta-button:hover {
-    background: #ff5722;
-    transform: scale(1.1);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 152, 0, 0.6);
   }
   
   /* Mobile Responsive Design */
-  @media (max-width: 768px) {
+  @media (max-width: 968px) {
     .MainContainer {
-      flex-direction: column; /* Stack elements vertically */
+      flex-direction: column;
       text-align: center;
-      height: auto;
-      padding: 10%;
+      padding: 120px 5% 60px 5%; /* adjust padding for sticky navbar */
     }
   
     .InfoContainer {
-      order: 2; /* Move text below image */
+      order: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
   
     .ImageContainer {
-      order: 1; /* Move image above text */
+      order: 1;
+      margin-bottom: 40px;
     }
   
-    h1 {
-      font-size: 2rem;
+    .InfoContainer h1 {
+      font-size: 2.5rem;
     }
   
-    h2 {
+    .InfoContainer h2 {
       font-size: 1.5rem;
     }
   
-    p {
+    .InfoContainer p {
       font-size: 1rem;
     }
   
     .profileImage {
-      width: 200px;
+      width: 280px;
+      height: 280px;
     }
   }
   
   @media (max-width: 480px) {
-    h1 {
-      font-size: 1.8rem;
+    .InfoContainer h1 {
+      font-size: 2rem;
     }
   
-    h2 {
-      font-size: 1.3rem;
+    .InfoContainer h2 {
+      font-size: 1.2rem;
     }
   
     .profileImage {
-      width: 180px;
+      width: 220px;
+      height: 220px;
     }
   
     .cta-button {
-      font-size: 1rem;
-      padding: 10px 20px;
+      font-size: 0.9rem;
+      padding: 12px 24px;
     }
   }
   
