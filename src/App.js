@@ -12,6 +12,7 @@ import DashBord from './Components/DashBord.js';
 import Ibm from './Components/IBM/Ibm.js';
 import Quess from './Components/Quess/Quess.js';
 import BlueMoon from './Components/BlueMoon/BlueMoon.js';
+import PrivacyPolicy from './Components/PrivacyPolicy.js';
 
 const App = () => {
   return (
@@ -29,6 +30,8 @@ const App = () => {
       <Route path='/ibm' element={<Ibm/>}/>
       <Route path='/quess' element={<Quess/>}/>
       <Route path='/bluemoon' element={<BlueMoon/>}/>
+      <Route path='/grid/PrivacyPolicy' element={<PrivacyPolicy/>}/>
+      <Route path='/grid/privacypolicy' element={<PrivacyPolicy/>}/>
 
    </Routes>
   </BrowserRouter>
